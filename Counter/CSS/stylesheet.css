@@ -1,0 +1,79 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* Variables */
+:root {
+  /* Colors */
+  --brown: #B96D40;
+  --tan: #FFE8D1;
+  --turquoise: #A4D4B4;
+  --purple: #3B1C32;
+  --pink: #CA054D;
+  /*  Fonts  */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+}
+
+/* Global */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--tan);
+  color: var(--purple);
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+/* Counter */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+#value {
+  font-size: 6rem;
+  font-weight: bold;
+
+}
+
+/* Buttons */
+.btn {
+  background: transparent;
+  color: var(--brown);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  border: 2px solid var(--purple);
+  cursor: pointer;
+  box-shadow: 0 1px 3px var(--purple);
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background: var(--purple);
+  color: var(--tan);
+  transform: scale(1.08);
+}
