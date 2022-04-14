@@ -1,0 +1,47 @@
+:root {
+    --light: #D3D0CB;
+    --primary: #587B7F;
+    --secondary: #E2C044;
+    --dark: #393E41;
+    --white: #FFFFFF;
+    --black: #000000;
+  }
+  
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  h2,
+  h4 {
+    letter-spacing: 0.3rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h4 {
+    font-size: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+  }
+  
