@@ -1,0 +1,322 @@
+/* Variables */
+:root {
+    --primary: #0091AD;
+    --secondary: #FF57BB;
+    --light: #bdd8de;
+    --white: white;
+    --dark: #002d36;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170p;
+    --fixed-width: 620px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img:not(.logo) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+h1, 
+h2 {
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--dark);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    p {
+        line-height: 1;
+    }
+}
+
+button {
+    background: transparent;
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid var(--white);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    background: var(--white);
+    color: var(--secondary);
+}
+
+.section {
+    padding-bottom: 5rem;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}
+
+nav {
+    background: var(--white);
+    padding: 1rem 1.5rem;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a {
+    color: var(--light);
+
+}
+
+.fixed-nav .links a:hover {
+    color: var(--secondary);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-toggle {
+    font-size: 1.5rem;
+    color: var(--light);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--secondary);
+}
+
+.logo {
+    height: 50px;
+}
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 200px;
+}
+
+.links a {
+    background: var(--white);
+    color: var(--dark);
+    font-size: 1.1rem;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.links a:hover {
+    color: var(--light);
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+    .nav-center {
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links-container {
+        height: auto !important;
+    }
+    .links {
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: var(--white);
+        font-size: 1.1rem;
+        letter-spacing: var(--spacing);
+        display: block;
+        transition: var(--transition);
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+    }
+    .links a:hover {
+        color: var(--white);
+    }
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(189, 216, 222, 1), rgba(0, 0, 0, 0.4)),
+    url(/media/hero-bcg.jpeg) center/cover no-repeat;  
+}
+
+.banner {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--white);
+}
+
+.container p {
+    color: var(--white);
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container p {
+        max-width: 40rem;
+    }
+}
+
+.title h2 {
+    text-align: center;
+}
+
+.title span {
+    color: var(--secondary);
+}
+
+#about,
+#services,
+#tours {
+    height: 80vh;
+}
+
+#services {
+    background: var(--white);
+}
+
+.copyright {
+    background: var(--light);
+    padding: 5rem 1rem;
+}
+
+.copyright p {
+    color: var(--white);
+    text-align: center;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0;
+}
+
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--secondary);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    color: var(--white);
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0% {
+        transfrom: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
